@@ -19,6 +19,11 @@ const flags = {
 		alias: `v`,
 		desc: `Print CLI version`
 	},
+	help: {
+		type: `boolean`,
+		alias: `h`,
+		desc: `Print help`
+	},
 	primarycolor: {
 		type: `boolean`,
 		alias: `p`,
@@ -30,10 +35,14 @@ const commands = {
 	help: { desc: `Print help info` }
 };
 
+const footer = 'Add file name(s) add argument(s) or a range of numbers';
+	;
+
 const helpText = meowHelp({
 	name: `wopt`,
 	flags,
-	commands
+	commands,
+	footer
 });
 
 const options = {
