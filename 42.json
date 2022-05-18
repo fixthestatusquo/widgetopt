@@ -1,0 +1,32 @@
+{
+	"actionpage": 42,
+	"organisation": "Fix the Status Quo",
+	"org": {
+		"privacyPolicy": "https://bla.bla",
+		"url": "https://fixthestatusquo.org"
+	},
+	"lang": "en",
+	"filename": "demo/42",
+	"lead": {
+		"name": "ftsq",
+		"title": "Fix the Status Quo"
+	},
+	"campaign": {
+		"title": "The Hitchhiker's Guide to the Galaxy",
+		"name": "do-not-panic"
+	},
+	"journey": [
+		"Register",
+		"Share"
+	],
+	"layout": {
+		"primaryColor": "#222"
+	},
+	"component": {
+		"widget": {
+			"mobileVersion": false
+		}
+	},
+	"portal": [],
+	"locales": {}
+}

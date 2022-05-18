@@ -18,6 +18,11 @@ const flags = {
 		type: `boolean`,
 		alias: `v`,
 		desc: `Print CLI version`
+	},
+	primarycolor: {
+		type: `boolean`,
+		alias: `p`,
+		desc: `Change primary color`
 	}
 };
 

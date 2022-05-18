@@ -14,10 +14,15 @@ const log = require('./utils/log');
 const input = cli.input;
 const flags = cli.flags;
 const { clear, debug } = flags;
+const primaryColor = require('./modules/primaryColor');
+const inputValid = require('./modules/inputValid');
 
-(async () => {
+(() => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
+
+ 	const inputs  = inputValid();
+	flags.primarycolor &&	primaryColor(inputs);
 
 	debug && log(flags);
 })();

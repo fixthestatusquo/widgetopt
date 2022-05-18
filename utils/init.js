@@ -9,7 +9,7 @@ module.exports = ({ clear = true }) => {
 		tagLine: `by 1v4n4`,
 		description: pkg.description,
 		version: pkg.version,
-		bgColor: '#36BB09',
+		bgColor: '#FFFF00',
 		color: '#000000',
 		bold: true,
 		clear
