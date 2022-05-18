@@ -9,6 +9,11 @@ module.exports = (arg) => {
     warning('File does not exist', fileName);
     return false;
   }
+  if (fs.statSync(path).size === 0) {
+    warning('File empty', fileName);
+    return false;
+  }
+
   const fileContent = JSON.parse(fs.readFileSync(path, 'utf8'));
   return { fileName, fileContent };
 }
