@@ -1,4 +1,4 @@
 const chalk = require('chalk');
 module.exports = (msg, filename) => {
-  console.log(chalk.yellow(chalk.bold(filename)), chalk.yellow(msg));
+  console.log(chalk.black(chalk.bgYellow(filename)), ' ', chalk.bold(chalk.yellow(msg)));
 }
