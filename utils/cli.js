@@ -28,6 +28,11 @@ const flags = {
 		type: `boolean`,
 		alias: `p`,
 		desc: `Change primary color`
+	},
+	url: {
+		type: `boolean`,
+		alias: `u`,
+		desc: `Change organization URL`
 	}
 };
 

@@ -1,0 +1,21 @@
+{
+	"actionpage": 1783,
+	"organisation": "Greenpeace Sweden",
+	"lang": "sv",
+	"filename": "taxonomy/greenpeace_se/sv",
+	"lead": {
+		"name": "wwfeu",
+		"title": "WWF European Policy Office"
+	},
+	"campaign": {
+		"title": "Taxonomy",
+		"name": "taxonomy"
+	},
+	"layout": {},
+	"component": {},
+	"portal": [],
+	"locales": {},
+	"org": {
+		"url": "https://www.npmjs.com/package/validator"
+	}
+}

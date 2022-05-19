@@ -3,8 +3,8 @@ const isHexcolor = require('is-hexcolor')
 const success = require('../messages/success');
 const warning = require('../messages/warning');
 
-module.exports = (args, input) => {
-  if (!isHexcolor(input)) {
+module.exports = (args) => {
+  if (!isHexcolor(process.argv[3])) {
     warning('Hex color code not valid.');
     process.exit(1);
   }

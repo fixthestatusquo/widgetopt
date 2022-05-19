@@ -14,16 +14,16 @@ const log = require('./utils/log');
 const input = cli.input;
 const flags = cli.flags;
 const { clear, debug } = flags;
-const primaryColor = require('./modules/primaryColor');
 const argsValid = require('./modules/argsValid');
+const primaryColor = require('./modules/primaryColor');
+const url = require('./modules/url');
 
 (() => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
+	debug && log(flags);
 
 	const args = argsValid();
-
-	flags.primarycolor &&	primaryColor(args, process.argv[3]);
-
-	debug && log(flags);
+	flags.primarycolor && primaryColor(args);
+	flags.url && url(args);
 })();
