@@ -1,17 +1,22 @@
 const fs = require('fs');
+const isHexcolor = require('is-hexcolor')
 const success = require('../messages/success');
 const warning = require('../messages/warning');
 
-module.exports = (inputs) => {
-  inputs.map(input => {
-    if (input.fileContent.layout) {
-      input.fileContent.layout.primaryColor = process.argv[3];
-      fs.writeFile(input.fileName, JSON.stringify(input.fileContent, null, '\t'), function (err) {
+module.exports = (args, input) => {
+  if (!isHexcolor(input)) {
+    warning('Hex color code not valid.');
+    process.exit(1);
+  }
+  args.map(arg => {
+    if (arg.fileContent.layout) {
+      arg.fileContent.layout.primaryColor = process.argv[3];
+      fs.writeFile(arg.fileName, JSON.stringify(arg.fileContent, null, '\t'), function (err) {
         if (err) throw err;
-        success('Color changed', input.fileName);
+        success('Color changed', arg.fileName);
       });
     } else {
-      warning('Invalid config file', input.fileName,);
+      warning('Invalid config file', arg.fileName,);
     }
 
   });

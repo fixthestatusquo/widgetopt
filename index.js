@@ -15,14 +15,15 @@ const input = cli.input;
 const flags = cli.flags;
 const { clear, debug } = flags;
 const primaryColor = require('./modules/primaryColor');
-const inputValid = require('./modules/inputValid');
+const argsValid = require('./modules/argsValid');
 
 (() => {
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
 
- 	const inputs  = inputValid();
-	flags.primarycolor &&	primaryColor(inputs);
+	const args = argsValid();
+
+	flags.primarycolor &&	primaryColor(args, process.argv[3]);
 
 	debug && log(flags);
 })();

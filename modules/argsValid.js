@@ -1,15 +1,9 @@
 const fileValid = require('./fileValid');
 const warning = require('../messages/warning');
-const isHexcolor = require('is-hexcolor')
 
 module.exports = () => {
   if (process.argv.length < 5) {
     warning('Input not valid. Use -help for more info.');
-    process.exit(1);
-  }
-
-  if (!isHexcolor(process.argv[3])) {
-    warning('Hex color code not valid.');
     process.exit(1);
   }
 
