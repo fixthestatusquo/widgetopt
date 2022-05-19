@@ -1,7 +1,7 @@
 const fs = require('fs');
 const isHexcolor = require('is-hexcolor')
-const success = require('../messages/success');
 const warning = require('../messages/warning');
+const writeFile = require('../modules/writeFile');
 
 module.exports = (args) => {
   if (!isHexcolor(process.argv[3])) {

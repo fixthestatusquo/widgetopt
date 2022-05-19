@@ -11,7 +11,9 @@
 		"title": "Taxonomy",
 		"name": "taxonomy"
 	},
-	"layout": {},
+	"layout": {
+		"primaryColor": "#333373"
+	},
 	"component": {},
 	"portal": [],
 	"locales": {},
